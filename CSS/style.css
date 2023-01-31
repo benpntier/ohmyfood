@@ -80,7 +80,7 @@ section {
     text-align: center;
 }
 
-h1 {
+.homepage h1 {
     font-size: 1.3em;
     max-width: 75%;
     margin: auto;
@@ -204,6 +204,11 @@ section:last-child{
     padding-bottom: 45px;
 }
 
+.restaurant-img {
+    height: 300px;
+    object-fit: cover;
+}
+
 .menu {
     border-radius: 15px 15px 0 0;
     background-color: #f7f7f7;
@@ -288,7 +293,7 @@ section:last-child{
 
 footer {
     background-color: #353535;
-    padding: 30px 30px 1px;
+    padding: 30px 30px;
 }
 
 footer li {
