@@ -4,7 +4,7 @@
 /***** Decembre 2022 ****/
 /************************/
 
-@import url('https://fonts.googleapis.com/css2?&family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?&family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
 
 body {
     margin: 0 auto;
@@ -23,6 +23,14 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+header .nav-back {
+    position: absolute;
+    top: 23px;
+    left: 20px;
+    font-size: 1.3em;
+    color: #353535;
 }
 
 #logo {
@@ -58,17 +66,18 @@ section {
     padding-top: 40px;
 }
 
-#home .button {
+.button {
     background: linear-gradient(170deg, #FF79DA 0%, #9356DC 100%);
     padding: 15px 20px;
     border-radius: 35px;
     color: white;
-    font-size: 0.8em;
-    font-weight: 500;
+    font-size: 0.9em;
+    font-weight: 400;
     margin-top: 15px;
     margin-bottom: 30px;
     box-shadow: 0px 4px 5px 1px rgba(0,0,0,0.2);
     display: inline-block;
+    text-align: center;
 }
 
 h1 {
@@ -81,7 +90,7 @@ h3 {
     font-size: 1.1em;
 }
 
-section:nth-child(odd) {
+.homepage section:nth-child(odd) {
     background-color: #f7f7f7;
 }
 
@@ -183,7 +192,7 @@ section:nth-child(odd) {
     line-height: 1.7em;
 }
 
-.card-txt h3, .card-txt p {
+.card-txt h3, .card-txt p, .plat-txt h3, .plat-txt p {
     margin: 0;
 }
 
@@ -193,6 +202,88 @@ section:nth-child(odd) {
 
 section:last-child{
     padding-bottom: 45px;
+}
+
+.menu {
+    border-radius: 15px 15px 0 0;
+    background-color: #f7f7f7;
+    filter: drop-shadow(0px 2px 25px rgba(0, 0, 0, 0.15));
+}
+
+.restaurant-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 40px;
+}
+
+.menu h1 {
+    font-family: Shrikhand;
+    font-size: 1.7em;
+    font-weight: 500;
+    text-align: left;
+    margin: 0;
+}
+
+.menu h2 {
+    font-weight: 300;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.menu section {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.underline {
+    width: 40px;
+    background-color: #99e2d0;
+    height: 3px;
+    margin-bottom: 12px;
+}
+
+.plat {
+    background-color: white;
+    border-radius: 15px;
+    filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.15));
+    padding: 10px 20px 10px 12px;
+    margin-bottom: 15px;
+}
+
+.plat-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.plat-txt h3 {
+    font-size: 1.05em;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.plat-txt p {
+    font-size: 0.95em;
+    font-weight: 300;
+}
+
+.prix {
+    font-weight: 500;
+    display: flex;
+    align-items: flex-end;
+    font-size: 0.95em;
+}
+
+.commander {
+    display: flex;
+    justify-content: space-around;
+}
+
+.commander .button {
+    width: 125px;
+    text-align: center;
 }
 
 footer {
