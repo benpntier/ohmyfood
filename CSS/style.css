@@ -345,7 +345,7 @@ footer .fa-solid {
 
 
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) {
     #fonctionnement ol {
         flex-direction: row;
         justify-content: space-between;
@@ -363,6 +363,11 @@ footer .fa-solid {
         font-size: 1em;
         width: 30px;
         padding: 5px 0;
+    }
+
+    .fonctionnement-texte {
+        display: flex;
+        align-items: center;
     }
 
     .liste-restaurants {
