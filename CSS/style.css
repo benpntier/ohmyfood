@@ -11,12 +11,12 @@ body {
     background-color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
     padding: 0;
-    max-width: 1400px;
 }
 
 ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 header {
@@ -345,7 +345,7 @@ footer .fa-solid {
 
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 700px) {
     #fonctionnement ol {
         flex-direction: row;
         justify-content: space-between;
@@ -392,4 +392,66 @@ footer .fa-solid {
     .card {
         padding-bottom: 0;
     }
+
+    .footer-links {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-content {
+        max-width: 550px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 991px) {
+
+    .header-home {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1400px;
+        margin: auto;
+        align-items: center;
+    }
+
+    .header-logo {
+        filter: none;
+    }
+
+    .header-home #logo {
+        margin-left: 50px;
+    }
+
+    #location {
+        background-color: white;
+        margin-right: 50px;
+    }
+
+    .homepage h2 {
+        text-align: center;
+    }
+
+    #fonctionnement ol {
+        max-width: 1000px;
+        margin:auto;
+    }
+
+    .menu {
+        border-radius: 0;
+    }
+
+    .menu .restaurant-name {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .liste-restaurants {
+        flex-wrap: nowrap;
+        max-width: 1900px;
+        margin: auto;
+    }
+    .liste-restaurants a {
+        min-width: 23%;
+    }
+
 }
