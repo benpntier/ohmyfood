@@ -44,7 +44,7 @@ header .nav-back {
     filter: drop-shadow(0 1px 3px rgba(0,0,0,0.2));
 }
 
-#logo {
+.header-home #logo, .header-restaurant #logo {
     margin: 23px auto 12px;
     width: 160px;
 }
@@ -384,9 +384,13 @@ footer .fa-solid {
         flex-grow: 1;
     }
 
-    .menu-section {
+    .menu-section, .restaurant-name {
         max-width: 700px;
         margin: auto;
+    }
+
+    .restaurant-name {
+        padding-right: 4.5%;
     }
 
     .card {
@@ -414,12 +418,23 @@ footer .fa-solid {
         align-items: center;
     }
 
-    .header-logo {
+    .header-home .header-logo {
         filter: none;
+        margin-left: 50px;
     }
 
-    .header-home #logo {
-        margin-left: 50px;
+    .header-restaurant #logo {
+        margin-left: 270px;
+        margin-right: 270px;
+
+    }
+
+    .header-restaurant .header-logo {
+        justify-content: center;
+    }
+
+    header .nav-back {
+        position: relative;
     }
 
     #location {
@@ -440,11 +455,6 @@ footer .fa-solid {
         border-radius: 0;
     }
 
-    .menu .restaurant-name {
-        max-width: 1000px;
-        margin: auto;
-    }
-
     .liste-restaurants {
         flex-wrap: nowrap;
         max-width: 1900px;
@@ -453,5 +463,7 @@ footer .fa-solid {
     .liste-restaurants a {
         min-width: 23%;
     }
+
+
 
 }
