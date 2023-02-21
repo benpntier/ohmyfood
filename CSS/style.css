@@ -7,10 +7,10 @@
 @import url('https://fonts.googleapis.com/css2?&family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
 
 body {
-    margin: 0 auto;
     background-color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
     padding: 0;
+    margin: 0 auto;
 }
 
 ul {
@@ -31,22 +31,21 @@ header {
 }
 
 header .nav-back {
+    font-size: 1.3em;
     position: absolute;
     top: 23px;
     left: 20px;
-    font-size: 1.3em;
-    
 }
 
 .header-logo {
-    background-color: white;
+    background-color: #FFFFFF;
     display: flex;
     filter: drop-shadow(0 1px 3px rgba(0,0,0,0.2));
 }
 
 .header-home #logo, .header-restaurant #logo {
-    margin: 23px auto 12px;
     width: 160px;
+    margin: 23px auto 12px;
 }
 
 #logo-white {
@@ -59,36 +58,45 @@ section {
 
 #location {
     background-color: #eaeaea;
-    padding: 15px;
-    text-align: center;
     color: #353535;
     font-weight: 500;
+    text-align: center;
+    padding: 15px;
 }
 
 #location .fa-solid {
     margin-right: 10px;
 }
 
+main {
+    
+}
+
 #home {
-    text-align: center;
-    font-weight: 300;
     font-size: 1.1em;
+    font-weight: 300;
+    text-align: center;
     padding-top: 40px;
 }
 
 .button {
     background: linear-gradient(170deg, #FF79DA 0%, #9356DC 100%);
-    padding: 15px 20px;
+    color: #FFFFFF;
     border-radius: 35px;
-    color: white;
     font-size: 0.9em;
     font-weight: 400;
-    margin-top: 15px;
-    margin-bottom: 30px;
     box-shadow: 0px 4px 5px 1px rgba(0,0,0,0.2);
     display: inline-block;
     text-align: center;
     text-decoration: none;
+    padding: 15px 20px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.homepage {
+    background-color: #f7f7f7;
+    min-height: calc(100vh - 212px);
 }
 
 .homepage h1 {
@@ -105,6 +113,10 @@ h3 {
     background-color: #f7f7f7;
 }
 
+.homepage section:nth-child(even) {
+    background-color: #ffffff;
+}
+
 #fonctionnement {
     padding-bottom: 40px;
 }
@@ -112,9 +124,9 @@ h3 {
 #fonctionnement ol {
     list-style: none;
     counter-reset: item;
-    padding: 0;
     display: flex;
     flex-direction: column;
+    padding: 0;
     margin-top: 30px;
     margin-bottom: 0;
 }
@@ -123,23 +135,23 @@ h3 {
     counter-increment: item;
     background-color: #f7f7f7;
     font-weight: 500;
-    padding: 25px 20px 25px;
-    margin: 0 0 25px 10px;
     box-shadow: 0px 4px 13px 1px rgba(0,0,0,0.13);
     border-radius: 20px;
+    padding: 25px 20px 25px;
+    margin: 0 0 25px 10px;
 }
 
 #fonctionnement li:before {
     content: counter(item);
     background-color: #9356dc;
-    color: white;
-    border-radius: 100%;
-    width: 24px;
+    color: #FFFFFF;
     text-align: center;
-    padding: 3px 0;
-    display: inline-block;
     font-weight: 400;
     font-size: 0.9em;
+    border-radius: 100%;
+    width: 24px;
+    display: inline-block;
+    padding: 3px 0;
     margin-left: -30px;
     margin-right: 18px;
 }
@@ -165,24 +177,24 @@ h3 {
     right: 15px;
     background-color: #99e2d0;
     color: #008766;
-    padding: 5px;
-    border-radius: 3px;
-    width: 75px;
-    text-align: center;
     font-size: 0.9em;
     font-weight: 500;
+    text-align: center;
+    width: 75px;
+    border-radius: 3px;
     box-shadow: 0px 4px 5px 1px rgba(0,0,0,0.2);
+    padding: 5px;
 }
 
 .card .card-info {
     background-color: white;
     border-radius: 0 0 15px 15px;
-    padding: 4px 16px 11px 16px;
-    margin-top: 0;
-    flex: 1;
-    flex-direction: row;
     display: flex;
     justify-content: space-between;
+    flex: 1;
+    flex-direction: row;
+    padding: 4px 16px 11px 16px;
+    margin-top: 0;
 }
 
 .coeur {
@@ -202,9 +214,9 @@ h3 {
 }
 
 .card-txt {
-    padding: 10px 0 5px;
     font-size: 1em;
     line-height: 1.7em;
+    padding: 10px 0 5px;
 }
 
 .card-txt h3, .card-txt p, .plat-txt h3, .plat-txt p {
@@ -235,10 +247,11 @@ section:last-child{
 }
 
 .menu {
-    border-radius: 40px 40px 0 0;
     background-color: #f7f7f7;
+    border-radius: 40px 40px 0 0;
     filter: drop-shadow(0px 2px 25px rgba(0, 0, 0, 0.1));
     margin-top: -60px;
+    min-height: calc(100vh - 450px);
 }
 
 .restaurant-name {
@@ -273,8 +286,8 @@ section:last-child{
 }
 
 .underline {
-    width: 40px;
     background-color: #99e2d0;
+    width: 40px;
     height: 3px;
     margin-bottom: 12px;
 }
@@ -310,10 +323,10 @@ section:last-child{
 }
 
 .prix {
+    font-size: 0.95em;
     font-weight: 500;
     display: flex;
     align-items: flex-end;
-    font-size: 0.95em;
 }
 
 .commander {
@@ -357,11 +370,11 @@ footer .fa-solid {
     }
 
     #fonctionnement li:before {
-        display: flex;
-        margin: -40px auto 15px;
-        justify-content: space-around;
         font-size: 1em;
+        display: flex;
+        justify-content: space-around;
         width: 30px;
+        margin: -40px auto 15px;
         padding: 5px 0;
     }
 
@@ -408,14 +421,16 @@ footer .fa-solid {
     }
 }
 
+
+
 @media screen and (min-width: 991px) {
 
     .header-home {
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         max-width: 1400px;
         margin: auto;
-        align-items: center;
     }
 
     .header-home .header-logo {
@@ -426,7 +441,6 @@ footer .fa-solid {
     .header-restaurant #logo {
         margin-left: 270px;
         margin-right: 270px;
-
     }
 
     .header-restaurant .header-logo {
@@ -463,7 +477,4 @@ footer .fa-solid {
     .liste-restaurants a {
         min-width: 23%;
     }
-
-
-
 }
