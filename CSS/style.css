@@ -209,11 +209,11 @@ h3 {
     padding: 10px 0 5px;
 }
 
-.card__text h3, .card__text p, .plats__text h3, .plats__text p {
+.card__title, .card__desc, .plats__title, .plats__desc {
     margin: 0;
 }
 
-.card__text p {
+.card__desc {
     font-size: 1.05em;
 }
 
@@ -221,7 +221,7 @@ section:last-child{
     padding-bottom: 45px;
 }
 
-.restaurant-img {
+.header__restaurant {
     height: 300px;
     object-fit: cover;
 }
@@ -244,15 +244,16 @@ section:last-child{
     min-height: calc(100vh - 450px);
 }
 
-.restaurant-name {
+.menu__title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-top: 30px;
+    padding-bottom: 5px;
     padding-right: 40px;
 }
 
-.menu h1 {
+.restaurant__title {
     font-family: Shrikhand;
     font-size: 1.7em;
     font-weight: 500;
@@ -260,14 +261,14 @@ section:last-child{
     margin: 0;
 }
 
-.menu h2 {
+.plats__type {
     font-weight: 300;
     font-size: 1em;
     text-transform: uppercase;
     margin-bottom: 5px;
 }
 
-.menu section {
+.plats {
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -298,13 +299,13 @@ section:last-child{
     justify-content: space-between;
 }
 
-.plats__text h3 {
+.plats__title {
     font-size: 1.05em;
     font-weight: 500;
     margin-bottom: 5px;
 }
 
-.plats__text p {
+.plats__desc {
     font-size: 0.95em;
     font-weight: 300;
 }
@@ -390,7 +391,7 @@ section:last-child{
         flex-grow: 1;
     }
 
-    .menu-section, .restaurant-name {
+    .plats, .menu__title {
         max-width: 700px;
         padding-right: 4.5%;
         margin: auto;
@@ -415,7 +416,7 @@ section:last-child{
 
 @media screen and (min-width: 991px) {
 
-    .header-home {
+    .header--home {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -423,17 +424,17 @@ section:last-child{
         margin: auto;
     }
 
-    .header-home .header__logo {
+    .header__logo--home {
         filter: none;
         margin-left: 50px;
     }
 
-    .header-restaurant .header__img {
+    .header__img--restaurant {
         margin-left: 270px;
         margin-right: 270px;
     }
 
-    .header-restaurant .header__logo {
+    .header__logo--restaurant {
         justify-content: center;
     }
 
@@ -446,7 +447,7 @@ section:last-child{
         margin-right: 50px;
     }
 
-    .homepage h2 {
+    .homepage__title {
         text-align: center;
     }
 

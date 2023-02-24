@@ -15,29 +15,29 @@
     </head>
 
     <body>
-        <header class="header header-restaurant">
-            <div class="header__logo">
+        <header class="header">
+            <div class="header__logo header__logo--restaurant">
                 <div class="header__arrow"><a href="../#restaurants" class="header__link"><i class="fa-solid fa-arrow-left"></i></a></div>
-                <img src="images/logo/ohmyfood.png" class="header__img" alt="OhMyFood">
+                <img src="images/logo/ohmyfood.png" class="header__img header__img--restaurant" alt="OhMyFood">
             </div>
-            <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" class="restaurant-img" alt="Le délice des sens">
+            <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" class="header__restaurant" alt="Le délice des sens">
         </header>
 
         <main class="menu">
-            <section class="restaurant-name">
+            <section class="menu__title">
                 <h1 class="restaurant__title">Le délice des sens</h1>
                 <div class="heart"><i class="heart__icon fa-regular fa-heart"></i></div>
             </section>
 
-            <section class="menu-section">
-                <h2>Entrées</h2>
+            <section class="plats">
+                <h2 class="plats__type">Entrées</h2>
                 <div class="plats__underline"></div>
                 <div class="plats__list">
                     <article class="plats__item">
                         <div class="plats__info">
                             <div class="plats__text">
-                                <h3>Tartare de thon</h3>
-                                <p>Assaisonné au yuzu</p>
+                                <h3 class="plats__title">Tartare de thon</h3>
+                                <p class="plats__desc">Assaisonné au yuzu</p>
                             </div>
                             <div class="plats__prix">25€</div>
                         </div>
@@ -45,8 +45,8 @@
                     <article class="plats__item">
                         <div class="plats__info">
                             <div class="plats__text">
-                                <h3>Bouchée de homard croutillant</h3>
-                                <p>Et sa farandole de petits légumes</p>
+                                <h3 class="plats__title">Bouchée de homard croutillant</h3>
+                                <p class="plats__desc">Et sa farandole de petits légumes</p>
                             </div>
                             <div class="plats__prix">35€</div>
                         </div>
@@ -54,8 +54,8 @@
                     <article class="plats__item">
                         <div class="plats__info">
                             <div class="plats__text">
-                                <h3>Velouté de cèpes</h3>
-                                <p>Aux truffes</p>
+                                <h3 class="plats__title">Velouté de cèpes</h3>
+                                <p class="plats__desc">Aux truffes</p>
                             </div>
                             <div class="plats__prix">20€</div>
                         </div>
@@ -63,15 +63,15 @@
                 </div>
             </section>
 
-            <section class="menu-section">
-                <h2>Plats</h2>
+            <section class="plats">
+                <h2 class="plats__type">Plats</h2>
                 <div class="plats__underline"></div>
                 <div class="plats__list">
                     <article class="plats__item">
                         <div class="plats__info">
                             <div class="plats__text">
-                                <h3>Poulet rôti aux herbes de Provence</h3>
-                                <p>Et sa crème de truffe</p>
+                                <h3 class="plats__title">Poulet rôti aux herbes de Provence</h3>
+                                <p class="plats__desc">Et sa crème de truffe</p>
                             </div>
                             <div class="plats__prix">40€</div>
                         </div>
@@ -79,8 +79,8 @@
                     <article class="plats__item">
                         <div class="plats__info">
                             <div class="plats__text">
-                                <h3>Langouste rôtie</h3>
-                                <p>Et ses légumes de saison</p>
+                                <h3 class="plats__title">Langouste rôtie</h3>
+                                <p class="plats__desc">Et ses légumes de saison</p>
                             </div>
                             <div class="plats__prix">35€</div>
                         </div>
@@ -88,8 +88,8 @@
                     <article class="plats__item">
                         <div class="plats__info">
                             <div class="plats__text">
-                                <h3>Côte de bœuf Angus</h3>
-                                <p>Et sa purée de panais</p>
+                                <h3 class="plats__title">Côte de bœuf Angus</h3>
+                                <p class="plats__desc">Et sa purée de panais</p>
                             </div>
                             <div class="plats__prix">44€</div>
                         </div>
@@ -97,15 +97,15 @@
                 </div>
             </section>
             
-            <section class="menu-section">
-                <h2>Desserts</h2>
+            <section class="plats">
+                <h2 class="plats__type">Desserts</h2>
                 <div class="plats__underline"></div>
                 <div class="plats__list">
                     <article class="plats__item">
                         <div class="plats__info">
                             <div class="plats__text">
-                                <h3>Farandole de desserts</h3>
-                                <p>Du chef</p>
+                                <h3 class="plats__title">Farandole de desserts</h3>
+                                <p class="plats__desc">Du chef</p>
                             </div>
                             <div class="plats__prix">18€</div>
                         </div>
@@ -113,8 +113,8 @@
                     <article class="plats__item">
                         <div class="plats__info">
                             <div class="plats__text">
-                                <h3>Crème brûlée</h3>
-                                <p>Revisitée</p>
+                                <h3 class="plats__title">Crème brûlée</h3>
+                                <p class="plats__desc">Revisitée</p>
                             </div>
                             <div class="plats__prix">22€</div>
                         </div>
@@ -122,8 +122,8 @@
                     <article class="plats__item">
                         <div class="plats__info">
                             <div class="plats__text">
-                                <h3>Tiramisu</h3>
-                                <p>À la noisette</p>
+                                <h3 class="plats__title">Tiramisu</h3>
+                                <p class="plats__desc">À la noisette</p>
                             </div>
                             <div class="plats__prix">23€</div>
                         </div>

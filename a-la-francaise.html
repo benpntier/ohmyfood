@@ -15,38 +15,38 @@
     </head>
 
     <body>
-        <header class="header header-restaurant">
-            <div class="header__logo">
+        <header class="header">
+            <div class="header__logo header__logo--restaurant">
                 <div class="header__arrow"><a href="../#restaurants" class="header__link"><i class="fa-solid fa-arrow-left"></i></a></div>
-                <img src="images/logo/ohmyfood.png" class="header__img" alt="OhMyFood">
+                <img src="images/logo/ohmyfood.png" class="header__img header__img--restaurant" alt="OhMyFood">
             </div>
-            <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" class="restaurant-img" alt="À la française">
+            <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" class="header__restaurant" alt="À la française">
         </header>
 
         <main class="menu">
-            <section class="restaurant-name">
+            <section class="menu__title">
                 <h1 class="restaurant__title">À la française</h1>
                 <div class="heart"><i class="heart__icon fa-regular fa-heart"></i></div>
             </section>
 
             <section class="plats">
-                <h2>Entrées</h2>
+                <h2 class="plats__type">Entrées</h2>
                 <div class="plats__underline"></div>
                 <div class="plats__list">
                     <article class="plats__item">
                         <div class="plats__info">
                             <div class="plats__text">
-                                <h3>Tartare de poulpe acidulé</h3>
-                                <p>Aux zestes d'orange</p>
+                                <h3 class="plats__title">Tartare de poulpe acidulé</h3>
+                                <p class="plats__desc">Aux zestes d'orange</p>
                             </div>
-                            <div class="plat__prix">25€</div>
+                            <div class="plats__prix">25€</div>
                         </div>
                     </article>
                     <article class="plats__item">
                         <div class="plats__info">
                             <div class="plats__text">
-                                <h3>Velouté de légumes d'antan</h3>
-                                <p>Carotte, panais, topinambour</p>
+                                <h3 class="plats__title">Velouté de légumes d'antan</h3>
+                                <p class="plats__desc">Carotte, panais, topinambour</p>
                             </div>
                             <div class="plats__prix">35€</div>
                         </div>
@@ -54,8 +54,8 @@
                     <article class="plats__item">
                         <div class="plats__info">
                             <div class="plats__text">
-                                <h3>Soupe à l'oignon</h3>
-                                <p>Revisitée</p>
+                                <h3 class="plats__title">Soupe à l'oignon</h3>
+                                <p class="plats__desc">Revisitée</p>
                             </div>
                             <div class="plats__prix">20€</div>
                         </div>
@@ -63,15 +63,15 @@
                 </div>
             </section>
     
-            <section class="menu-section">
-                <h2>Plats</h2>
+            <section class="plats">
+                <h2 class="plats__type">Plats</h2>
                 <div class="plats__underline"></div>
                 <div class="plats__list">
                     <article class="plats__item">
                         <div class="plats__info">
                             <div class="plats__text">
-                                <h3>Coquilles Saint-Jacques</h3>
-                                <p>Accompagnées d'une purée de panais</p>
+                                <h3 class="plats__title">Coquilles Saint-Jacques</h3>
+                                <p class="plats__desc">Accompagnées d'une purée de panais</p>
                             </div>
                             <div class="plats__prix">40€</div>
                         </div>
@@ -79,8 +79,8 @@
                     <article class="plats__item">
                         <div class="plats__info">
                             <div class="plats__text">
-                                <h3>Magret de canard</h3>
-                                <p>Et parmentier de pommes de terre</p>
+                                <h3 class="plats__title">Magret de canard</h3>
+                                <p class="plats__desc">Et parmentier de pommes de terre</p>
                             </div>
                             <div class="plats__prix">35€</div>
                         </div>
@@ -88,8 +88,8 @@
                     <article class="plats__item">
                         <div class="plats__info">
                             <div class="plats__text">
-                                <h3>Pigeonneau d'Ille-et-Vilaine</h3>
-                                <p>Sur son lit de gnocchis aux légumes</p>
+                                <h3 class="plats__title">Pigeonneau d'Ille-et-Vilaine</h3>
+                                <p class="plats__desc">Sur son lit de gnocchis aux légumes</p>
                             </div>
                             <div class="plats__prix">44€</div>
                         </div>
@@ -97,33 +97,33 @@
                 </div>
             </section>
             
-            <section class="menu-section">
-                <h2>Desserts</h2>
+            <section class="plats">
+                <h2 class="plats__type">Desserts</h2>
                 <div class="plats__underline"></div>
                 <div class="plats__list">
                     <article class="plats__item">
                         <div class="plats__info">
                             <div class="plats__text">
-                                <h3>Pétales de violettes glacés</h3>
-                                <p>Et purée de noisettes</p>
+                                <h3 class="plats__title">Pétales de violettes glacés</h3>
+                                <p class="plats__desc">Et purée de noisettes</p>
                             </div>
                             <div class="plats__prix">18€</div>
                         </div>
                     </article>
                     <article class="plats__item">
                         <div class="plats__info">
-                            <div class="plat__text">
-                                <h3>Fondant au chocolat</h3>
-                                <p>Revisité</p>
+                            <div class="plats__text">
+                                <h3 class="plats__title">Fondant au chocolat</h3>
+                                <p class="plats__desc">Revisité</p>
                             </div>
-                            <div class="plat__prix">22€</div>
+                            <div class="plats__prix">22€</div>
                         </div>
                     </article>
                     <article class="plats__item">
                         <div class="plats__info">
                             <div class="plats__text">
-                                <h3>Millefeuille croustillant</h3>
-                                <p>Myrtilles et pâte d'amande</p>
+                                <h3 class="plats__title">Millefeuille croustillant</h3>
+                                <p class="plats__desc">Myrtilles et pâte d'amande</p>
                             </div>
                             <div class="plats__prix">23€</div>
                         </div>
