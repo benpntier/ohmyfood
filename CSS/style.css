@@ -20,6 +20,10 @@ body {
 .header__link {
   color: #353535;
   text-decoration: none;
+  transition: color 0.4s;
+}
+.header__link:hover {
+  color: #008766;
 }
 .header__arrow {
   font-size: 1.3em;
@@ -80,6 +84,25 @@ section {
   padding: 15px 20px;
   margin-top: 15px;
   margin-bottom: 30px;
+  position: relative;
+  z-index: 0;
+}
+.button::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 35px;
+  box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.13);
+  background: linear-gradient(170deg, #ff8de0 0%, #9e67e0 100%);
+  opacity: 0;
+  transition: all 0.3s;
+}
+.button:hover::after {
+  opacity: 1;
 }
 
 .homepage {
@@ -117,6 +140,8 @@ h3 {
   border-radius: 20px;
   padding: 25px 20px 25px;
   margin: 0 0 25px 10px;
+  position: relative;
+  z-index: 0;
 }
 .fonctionnement__item:before {
   content: counter(item);
@@ -131,6 +156,23 @@ h3 {
   padding: 3px 0;
   margin-left: -30px;
   margin-right: 18px;
+  z-index: 1;
+}
+.fonctionnement__item::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 20px;
+  box-shadow: 0px 4px 13px 1px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.fonctionnement__item:hover::after {
+  opacity: 1;
 }
 .fonctionnement__icon {
   color: #7e7e7e;
@@ -145,6 +187,7 @@ h3 {
   display: flex;
   flex-direction: column;
   padding-bottom: 20px;
+  transition: filter 0.3s;
 }
 .card__new {
   position: absolute;
@@ -159,6 +202,23 @@ h3 {
   border-radius: 3px;
   box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.2);
   padding: 5px;
+  z-index: 0;
+}
+.card__new::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 3px;
+  box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.card__new:hover::after {
+  opacity: 1;
 }
 .card__info {
   background-color: #FFFFFF;
@@ -183,6 +243,9 @@ h3 {
 }
 .card__desc {
   font-size: 1.05em;
+}
+.card:hover {
+  filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.35));
 }
 
 .card__title, .card__desc, .plats__title, .plats__desc {
@@ -238,6 +301,9 @@ section:last-child {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+.plats:hover > .plats__underline {
+  width: 100px;
+}
 .plats__type {
   font-weight: 300;
   font-size: 1em;
@@ -249,6 +315,7 @@ section:last-child {
   width: 40px;
   height: 3px;
   margin-bottom: 12px;
+  transition: width 0.3s;
 }
 .plats__list {
   display: flex;
@@ -257,9 +324,13 @@ section:last-child {
 .plats__item {
   background-color: #FFFFFF;
   border-radius: 15px;
-  filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.15));
   padding: 10px 20px 10px 12px;
   margin-bottom: 15px;
+  filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.15));
+  transition: filter 0.3s;
+}
+.plats__item:hover {
+  filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.3));
 }
 .plats__info {
   display: flex;
@@ -306,6 +377,14 @@ section:last-child {
 .footer__item {
   color: #FFFFFF;
   margin: 10px 0;
+}
+.footer__link {
+  text-decoration: none;
+  color: #FFFFFF;
+  transition: color 0.3s;
+}
+.footer__link:hover {
+  color: #99E2D0;
 }
 .footer__icon {
   font-size: 0.9em;
