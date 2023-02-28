@@ -107,7 +107,7 @@ section {
 
 .homepage {
   background-color: #F7F7F7;
-  min-height: calc(100vh - 212px);
+  min-height: calc(100vh - 260px);
 }
 .homepage section:nth-child(odd) {
   background-color: #F7F7F7;
@@ -310,6 +310,7 @@ section:last-child {
   padding-top: 30px;
   padding-bottom: 5px;
   padding-right: 40px;
+  align-items: center;
 }
 
 .restaurant__title {

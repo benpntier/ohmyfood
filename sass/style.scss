@@ -126,7 +126,7 @@ section {
 
 .homepage {
     background-color: $bg-secondary;
-    min-height: calc(100vh - 212px);
+    min-height: calc(100vh - 260px);
 
     section:nth-child(odd) {
         background-color: $bg-secondary;
@@ -179,7 +179,6 @@ h3 {
             margin-right: 18px;
             z-index: 1;
         }
-
         &::after {
             @include pseudo-hover;
             border-radius: 20px;
@@ -189,11 +188,9 @@ h3 {
             opacity: 0;
             transition: opacity 0.3s;
         }
-
         &:hover::after {
             opacity: 1;
         }
-
         &:hover .fonctionnement__icon {
             color: $primary;
         }
@@ -268,7 +265,6 @@ h3 {
     &__desc {
         font-size: 1.05em;
     }
-
     &:hover{
         filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.35));
         color: darken($primary, 25);
@@ -300,7 +296,6 @@ h3 {
             transition: transform 0.3s;
         }
     }
-
     &:hover &__icon--full {
         transform: scale(1);
     }
@@ -335,6 +330,7 @@ section:last-child{
         padding-top: 30px;
         padding-bottom: 5px;
         padding-right: 40px;
+        align-items: center;
     }
 }
 
