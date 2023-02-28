@@ -193,6 +193,10 @@ h3 {
         &:hover::after {
             opacity: 1;
         }
+
+        &:hover .fonctionnement__icon {
+            color: $primary;
+        }
     }
     &__icon {
         color: #7e7e7e;
@@ -200,6 +204,7 @@ h3 {
         width: 19px;
         text-align: center;
         margin-right: 15px;
+        transition: color 0.3s;
     }
 }
 
@@ -208,7 +213,7 @@ h3 {
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
-    transition: filter 0.3s;
+    transition: all 0.3s;
 
     &__new {
         position: absolute;
@@ -229,8 +234,8 @@ h3 {
             border-radius: 3px;
 
             box-shadow: 0px 4px 5px 1px rgba(0,0,0,0.15);
-            color: darken($tertiary-darker, 4);
-            background-color: lighten($tertiary, 4);
+            color: darken($tertiary-darker, 8);
+            background-color: lighten($tertiary, 6);
             opacity: 0;
             transition: opacity 0.3s;
         }
@@ -243,6 +248,7 @@ h3 {
         border-radius: 0 0 15px 15px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         flex: 1;
         flex-direction: row;
         padding: 4px 16px 11px 16px;
@@ -265,6 +271,7 @@ h3 {
 
     &:hover{
         filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.35));
+        color: darken($primary, 25);
     }
 }
 
@@ -274,10 +281,28 @@ h3 {
 
 .heart {
     display: flex;
-    align-items: center;
+    height: 100%;
 
     &__icon {
         font-size: 1.4em;
+
+        &--full {
+            z-index: 1;
+            position: absolute;
+
+            background: linear-gradient(45deg, $secondary 0%, $primary 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-text-fill-color: transparent;
+
+            transform: scale(0);
+            transition: transform 0.3s;
+        }
+    }
+
+    &:hover &__icon--full {
+        transform: scale(1);
     }
 }
 
@@ -326,7 +351,7 @@ section:last-child{
     padding-bottom: 5px;
 
     &:hover > &__underline {
-        width: 100px;
+        transform: scaleX(2.5);
     }
     &__type {
         font-weight: 300;
@@ -337,9 +362,11 @@ section:last-child{
     &__underline {
         background-color: $tertiary;
         width: 40px;
+        transform: scaleX(1);
+        transform-origin: 0% 50%;
         height: 3px;
         margin-bottom: 12px;
-        transition: width 0.3s;
+        transition: transform 0.3s;
     }
     &__list {
         display: flex;
@@ -356,26 +383,68 @@ section:last-child{
         &:hover {
             filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.3));
         }
+
+        &:hover .plats__check {
+            opacity: 1;
+        }
+
+        &:hover .plats__info {
+            padding-right: 50px;
+        }
+
+        &:hover .plats__icon {
+            transform: rotate(0deg);
+        }
     }
     &__info {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        padding-right: 0;
+        transition: padding-right 0.3s;
     }
     &__title {
         font-size: 1.05em;
         font-weight: 500;
         margin-bottom: 5px;
     }
+    &__text {
+        overflow: hidden;
+    }
     &__desc {
         font-size: 0.95em;
         font-weight: 300;
+    }
+    &__title, &__desc {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
     &__prix {
         font-size: 0.95em;
         font-weight: 500;
         display: flex;
         align-items: flex-end;
+        padding-left: 10px;
+    }
+    &__check {
+        background-color: $tertiary;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 55px;
+        border-radius: 0 15px 15px 0;
+        color: $text-secondary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    &__icon {
+        transform: rotate(-180deg);
+        transition: transform 0.3s;
     }
 }
 
@@ -407,7 +476,7 @@ section:last-child{
     &__link {
         text-decoration: none;
         color: $text-secondary;
-        transition: color 0.3s;
+        transition: color 0.2s;
         &:hover {
             color: $tertiary;
         }
