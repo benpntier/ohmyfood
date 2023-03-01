@@ -26,11 +26,133 @@ $text-secondary: #FFFFFF;
     z-index: -1;
 }
 
+@keyframes platsFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes loaderFadeOut {
+    0% {
+        opacity: 1;
+        z-index: 1;
+    }
+    90% {
+        opacity: 0;
+        z-index: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+ @keyframes spinnerRotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+ }
+
+ @keyframes forkSlideIn {
+    0% {
+        transform: translateX(45px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+ }
+
+ @keyframes knifeSlideOut {
+    0% {
+        transform: translateX(-45px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+ }
+
+ @keyframes plateFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(1.4);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+ }
+
 body {
     background-color: $bg-primary;
     font-family: 'Roboto', sans-serif;
     padding: 0;
     margin: 0 auto;
+}
+
+.loader {
+    background-color: $bg-secondary;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    animation: loaderFadeOut 0.5s ease-in-out 3s 1 both;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    gap: 3px;
+    color: darken($primary, 30);
+
+    &__icon {
+        overflow: hidden;
+        animation-duration: 0.5s;
+        animation-delay: 0.5s;
+        animation-fill-mode: both;
+
+        &--fork{
+            width: 28px;
+            animation-name: forkSlideIn;
+        }
+        &--knife {    
+            width: 21px;
+            direction: rtl;
+            animation-name: knifeSlideOut;
+
+        }
+    }
+    &__plate {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        background-color: darken($primary, 30);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: plateFadeIn 0.5s ease-in-out 0.3s 1 both;
+
+        &--inner {
+            height: 38px;
+            width: 38px;
+            border-radius: 50%;
+            border-color: white;
+            border-width: 2px;
+            border-style: solid;
+            border-bottom-color: transparent;
+            animation: spinnerRotation 1s linear 0s infinite;
+        }
+    }
 }
 
 .header {
@@ -373,15 +495,17 @@ section:last-child{
         border-radius: 15px;
         padding: 10px 20px 10px 12px;
         margin-bottom: 15px;
+        overflow-x: hidden;
         filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.15));
         transition: filter 0.3s;
+        animation: platsFadeIn 0.7s ease-in-out 0.1s 1 both;
 
         &:hover {
             filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.3));
         }
 
         &:hover .plats__check {
-            opacity: 1;
+            right: 0;
         }
 
         &:hover .plats__info {
@@ -390,6 +514,13 @@ section:last-child{
 
         &:hover .plats__icon {
             transform: rotate(0deg);
+        }
+    }
+    @for $i from 0 to 3 {
+        @for $j from 1 to 5 {
+            &:nth-child(#{$i+2}) .plats__item:nth-child(#{$j}) {
+                animation-delay: #{$i*0.6 + $j*0.15}s;
+            }
         }
     }
     &__info {
@@ -427,7 +558,7 @@ section:last-child{
         background-color: $tertiary;
         position: absolute;
         top: 0;
-        right: 0;
+        right: -55px;
         height: 100%;
         width: 55px;
         border-radius: 0 15px 15px 0;
@@ -435,12 +566,12 @@ section:last-child{
         display: flex;
         align-items: center;
         justify-content: center;
-        opacity: 0;
-        transition: opacity 0.3s;
+        transition: right 0.3s;
     }
     &__icon {
-        transform: rotate(-180deg);
-        transition: transform 0.3s;
+        transform: rotate(-360deg);
+        transition: transform 0.3s 0.05s;
+        font-size: 1.3em;
     }
 }
 

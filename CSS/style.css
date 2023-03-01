@@ -5,11 +5,122 @@
 /***** Decembre 2022 ****/
 /************************/
 @import url("https://fonts.googleapis.com/css2?&family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+@keyframes platsFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes loaderFadeOut {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  90% {
+    opacity: 0;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes spinnerRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes forkSlideIn {
+  0% {
+    transform: translateX(45px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes knifeSlideOut {
+  0% {
+    transform: translateX(-45px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes plateFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 body {
   background-color: #FFFFFF;
   font-family: "Roboto", sans-serif;
   padding: 0;
   margin: 0 auto;
+}
+
+.loader {
+  background-color: #F7F7F7;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  animation: loaderFadeOut 0.5s ease-in-out 3s 1 both;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+  gap: 3px;
+  color: #481a7f;
+}
+.loader__icon {
+  overflow: hidden;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+.loader__icon--fork {
+  width: 28px;
+  animation-name: forkSlideIn;
+}
+.loader__icon--knife {
+  width: 21px;
+  direction: rtl;
+  animation-name: knifeSlideOut;
+}
+.loader__plate {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #481a7f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: plateFadeIn 0.5s ease-in-out 0.3s 1 both;
+}
+.loader__plate--inner {
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-bottom-color: transparent;
+  animation: spinnerRotation 1s linear 0s infinite;
 }
 
 .header {
@@ -352,20 +463,58 @@ section:last-child {
   border-radius: 15px;
   padding: 10px 20px 10px 12px;
   margin-bottom: 15px;
+  overflow-x: hidden;
   filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.15));
   transition: filter 0.3s;
+  animation: platsFadeIn 0.7s ease-in-out 0.1s 1 both;
 }
 .plats__item:hover {
   filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.3));
 }
 .plats__item:hover .plats__check {
-  opacity: 1;
+  right: 0;
 }
 .plats__item:hover .plats__info {
   padding-right: 50px;
 }
 .plats__item:hover .plats__icon {
   transform: rotate(0deg);
+}
+.plats:nth-child(2) .plats__item:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.plats:nth-child(2) .plats__item:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.plats:nth-child(2) .plats__item:nth-child(3) {
+  animation-delay: 0.45s;
+}
+.plats:nth-child(2) .plats__item:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.plats:nth-child(3) .plats__item:nth-child(1) {
+  animation-delay: 0.75s;
+}
+.plats:nth-child(3) .plats__item:nth-child(2) {
+  animation-delay: 0.9s;
+}
+.plats:nth-child(3) .plats__item:nth-child(3) {
+  animation-delay: 1.05s;
+}
+.plats:nth-child(3) .plats__item:nth-child(4) {
+  animation-delay: 1.2s;
+}
+.plats:nth-child(4) .plats__item:nth-child(1) {
+  animation-delay: 1.35s;
+}
+.plats:nth-child(4) .plats__item:nth-child(2) {
+  animation-delay: 1.5s;
+}
+.plats:nth-child(4) .plats__item:nth-child(3) {
+  animation-delay: 1.65s;
+}
+.plats:nth-child(4) .plats__item:nth-child(4) {
+  animation-delay: 1.8s;
 }
 .plats__info {
   display: flex;
@@ -402,7 +551,7 @@ section:last-child {
   background-color: #99E2D0;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -55px;
   height: 100%;
   width: 55px;
   border-radius: 0 15px 15px 0;
@@ -410,12 +559,12 @@ section:last-child {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s;
+  transition: right 0.3s;
 }
 .plats__icon {
-  transform: rotate(-180deg);
-  transition: transform 0.3s;
+  transform: rotate(-360deg);
+  transition: transform 0.3s 0.05s;
+  font-size: 1.3em;
 }
 
 .commander {
