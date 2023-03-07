@@ -131,10 +131,22 @@ body {
 .header__link {
   color: #353535;
   text-decoration: none;
-  transition: color 0.4s;
 }
-.header__link:hover {
-  color: #008766;
+.header__link::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  background-color: #EAEAEA;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  top: -5px;
+  left: -8px;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.header__link:hover::after {
+  opacity: 1;
 }
 .header__arrow {
   font-size: 1.3em;

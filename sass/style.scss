@@ -163,9 +163,22 @@ body {
     &__link {
         color: $dark-grey;
         text-decoration: none;
-        transition: color 0.4s;
-        &:hover {
-            color: $tertiary-darker;
+
+        &::after {
+            position: absolute;
+            content: "";
+            z-index: -1;
+            background-color: $bg-tertiary;
+            border-radius: 50%;
+            height: 35px;
+            width: 35px;
+            top: -5px;
+            left: -8px;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        &:hover::after {
+            opacity: 1;
         }
     }
     &__arrow {
